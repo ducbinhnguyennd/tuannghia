@@ -43,11 +43,7 @@ class _ScreenSetWeightState extends State<ScreenSetWeight> {
                     Expanded(
                       child: InkWell(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ScreenSetWeight()),
-                            );
+                            Navigator.of(context).pop();
                           },
                           child: Center(
                             child: Container(

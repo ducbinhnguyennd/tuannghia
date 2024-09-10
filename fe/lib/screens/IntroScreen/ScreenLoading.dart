@@ -45,7 +45,9 @@ class _ScreenLoadingState extends State<ScreenLoading> {
           Padding(
             padding: const EdgeInsets.only(bottom: 100),
             child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
                 child: Center(
                   child: Container(
                     height: 50,

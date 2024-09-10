@@ -28,7 +28,7 @@ class _ScreenSetWeightState extends State<ScreenTargetWeight> {
                 padding: const EdgeInsets.symmetric(vertical: 20.0),
                 child: Center(
                     child: Text('Enter your target weight',
-                    textAlign: TextAlign.center,
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -44,11 +44,7 @@ class _ScreenSetWeightState extends State<ScreenTargetWeight> {
                     Expanded(
                       child: InkWell(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ScreenTargetWeight()),
-                            );
+                            Navigator.of(context).pop();
                           },
                           child: Center(
                             child: Container(
@@ -76,8 +72,7 @@ class _ScreenSetWeightState extends State<ScreenTargetWeight> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ScreenLoading()),
+                                  builder: (context) => const ScreenLoading()),
                             );
                           },
                           child: Center(
