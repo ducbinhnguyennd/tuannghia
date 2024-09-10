@@ -1,16 +1,17 @@
 import 'package:fitgoals/screens/IntroScreen/ScreenSetWeight.dart';
+import 'package:fitgoals/screens/IntroScreen/ScreenTargetWeight.dart';
 import 'package:fitgoals/widgets/listwheel/ListWheelScrollHeight.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ScreenSetHeight extends StatefulWidget {
-  const ScreenSetHeight({super.key});
+class ScreenTargetHeight extends StatefulWidget {
+  const ScreenTargetHeight({super.key});
 
   @override
-  State<ScreenSetHeight> createState() => _ScreenSetHeightState();
+  State<ScreenTargetHeight> createState() => _ScreenSetHeightState();
 }
 
-class _ScreenSetHeightState extends State<ScreenSetHeight> {
+class _ScreenSetHeightState extends State<ScreenTargetHeight> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +27,8 @@ class _ScreenSetHeightState extends State<ScreenSetHeight> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20.0),
                 child: Center(
-                    child: Text('Enter your height',
+                    child: Text('Enter your target height',
+                    textAlign: TextAlign.center,
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -70,7 +72,7 @@ class _ScreenSetHeightState extends State<ScreenSetHeight> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const ScreenSetWeight()),
+                                  builder: (context) => const ScreenTargetWeight()),
                             );
                           },
                           child: Center(

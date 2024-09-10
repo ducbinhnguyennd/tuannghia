@@ -1,4 +1,5 @@
 import 'package:fitgoals/screens/IntroScreen/ScreenSetHeight.dart';
+import 'package:fitgoals/screens/IntroScreen/ScreenTargetHeight.dart';
 import 'package:flutter/material.dart';
 
 class DiseaseSelectionScreen extends StatefulWidget {
@@ -162,7 +163,7 @@ class _DiseaseSelectionScreenState extends State<DiseaseSelectionScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ScreenSetHeight()),
+                              builder: (context) => const ScreenTargetHeight()),
                         );
                       },
                       child: Center(

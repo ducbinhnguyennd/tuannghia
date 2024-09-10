@@ -1,16 +1,17 @@
-import 'package:fitgoals/screens/IntroScreen/ScreenSetWeight.dart';
+import 'package:fitgoals/screens/IntroScreen/DiseaseSelectionScreen.dart';
+import 'package:fitgoals/screens/IntroScreen/ScreenLoading.dart';
 import 'package:fitgoals/widgets/listwheel/ListWheelScrollHeight.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ScreenSetHeight extends StatefulWidget {
-  const ScreenSetHeight({super.key});
+class ScreenTargetWeight extends StatefulWidget {
+  const ScreenTargetWeight({super.key});
 
   @override
-  State<ScreenSetHeight> createState() => _ScreenSetHeightState();
+  State<ScreenTargetWeight> createState() => _ScreenSetWeightState();
 }
 
-class _ScreenSetHeightState extends State<ScreenSetHeight> {
+class _ScreenSetWeightState extends State<ScreenTargetWeight> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,10 +24,11 @@ class _ScreenSetHeightState extends State<ScreenSetHeight> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Image.asset('assets/General/logo.png'),
-              Padding(
+              const Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20.0),
                 child: Center(
-                    child: Text('Enter your height',
+                    child: Text('Enter your target weight',
+                    textAlign: TextAlign.center,
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -42,7 +44,11 @@ class _ScreenSetHeightState extends State<ScreenSetHeight> {
                     Expanded(
                       child: InkWell(
                           onTap: () {
-                            Navigator.of(context).pop();
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const ScreenTargetWeight()),
+                            );
                           },
                           child: Center(
                             child: Container(
@@ -51,7 +57,7 @@ class _ScreenSetHeightState extends State<ScreenSetHeight> {
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(30)),
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   'Previous',
                                   style: TextStyle(
@@ -70,7 +76,8 @@ class _ScreenSetHeightState extends State<ScreenSetHeight> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const ScreenSetWeight()),
+                                  builder: (context) =>
+                                      const ScreenLoading()),
                             );
                           },
                           child: Center(
@@ -80,7 +87,7 @@ class _ScreenSetHeightState extends State<ScreenSetHeight> {
                               decoration: BoxDecoration(
                                   color: const Color(0xffD21312),
                                   borderRadius: BorderRadius.circular(30)),
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   'Next',
                                   style: TextStyle(

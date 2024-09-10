@@ -40,53 +40,57 @@ class _ScreenSetAgeState extends State<ScreenSetAge> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    InkWell(
-                        onTap: () {
-                          Navigator.of(context).pop();
-                        },
-                        child: Center(
-                          child: Container(
-                            height: 50,
-                            width: MediaQuery.of(context).size.width / 2.5,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(30)),
-                            child: Center(
-                              child: Text(
-                                'Previous',
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 20),
+                    Expanded(
+                      child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Center(
+                            child: Container(
+                              height: 50,
+                              width: MediaQuery.of(context).size.width / 2.5,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(30)),
+                              child: Center(
+                                child: Text(
+                                  'Previous',
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 20),
+                                ),
                               ),
                             ),
-                          ),
-                        )),
+                          )),
+                    ),
                     SizedBox(
                       width: 10,
                     ),
-                    InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ScreenSetHeight()),
-                          );
-                        },
-                        child: Center(
-                          child: Container(
-                            height: 50,
-                            width: MediaQuery.of(context).size.width / 2.5,
-                            decoration: BoxDecoration(
-                                color: const Color(0xffD21312),
-                                borderRadius: BorderRadius.circular(30)),
-                            child: Center(
-                              child: Text(
-                                'Next',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 20),
+                    Expanded(
+                      child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const ScreenSetHeight()),
+                            );
+                          },
+                          child: Center(
+                            child: Container(
+                              height: 50,
+                              width: MediaQuery.of(context).size.width / 2.5,
+                              decoration: BoxDecoration(
+                                  color: const Color(0xffD21312),
+                                  borderRadius: BorderRadius.circular(30)),
+                              child: Center(
+                                child: Text(
+                                  'Next',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 20),
+                                ),
                               ),
                             ),
-                          ),
-                        )),
+                          )),
+                    ),
                   ],
                 ),
               ),

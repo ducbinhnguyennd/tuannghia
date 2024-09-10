@@ -56,7 +56,7 @@ class _LoadingScreenProgressState extends State<LoadingScreenProgress> {
               child: LinearProgressIndicator(
                 value: _progressValue,
                 backgroundColor: Colors.grey,
-                color: Color(0xffD21312),
+                color: const Color(0xffD21312),
                 minHeight: 10,
               ),
             ),
